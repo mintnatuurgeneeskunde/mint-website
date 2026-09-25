@@ -28,8 +28,14 @@
           })
           .then(function (result) {
             if (result.ok) {
-              if (message) showMessage(message, 'Bedankt! Check je mailbox voor de checklist.', true);
+              if (message) showMessage(message, 'Bedankt! De checklist wordt gedownload en staat ook in je mailbox.', true);
               form.reset();
+              var link = document.createElement('a');
+              link.href = '/downloads/voedingstips-gezonde-spijsvertering.pdf';
+              link.download = 'Mint - Voedingstips voor een gezonde spijsvertering.pdf';
+              document.body.appendChild(link);
+              link.click();
+              link.remove();
             } else {
               if (message) showMessage(message, (result.data && result.data.error) || 'Er ging iets mis, probeer het later opnieuw.', false);
             }
