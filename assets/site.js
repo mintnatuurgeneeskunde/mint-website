@@ -103,9 +103,24 @@
     });
   }
 
+  function initMobileNav() {
+    var btn = document.querySelector('.mobile-menu-btn');
+    var nav = document.querySelector('.site-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('is-open');
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initDownloadForms();
     initContactForm();
     initBlogFilters();
+    initMobileNav();
   });
 })();
