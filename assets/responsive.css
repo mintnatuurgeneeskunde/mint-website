@@ -18,7 +18,7 @@ img, iframe, video { max-width: 100%; }
   }
   .mobile-menu-btn{display:flex;}
   .site-nav{
-    display:none;
+    display:none !important;
     width:100%;
     flex-direction:column;
     align-items:flex-start !important;
@@ -26,7 +26,7 @@ img, iframe, video { max-width: 100%; }
     padding-top:12px;
     order:3;
   }
-  .site-nav.is-open{display:flex;}
+  .site-nav.is-open{display:flex !important;}
   .site-nav > a{width:100%;padding:12px 0 !important;border-bottom:1px solid rgba(30,61,56,0.08) !important;}
   .site-nav .nav-dropdown{width:100%;}
   .site-nav .nav-dropdown > a{width:100%;padding:12px 0 !important;border-bottom:1px solid rgba(30,61,56,0.08) !important;display:block;}
