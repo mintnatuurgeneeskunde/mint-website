@@ -28,7 +28,7 @@
           })
           .then(function (result) {
             if (result.ok) {
-              if (message) showMessage(message, 'Bedankt! De checklist wordt gedownload en staat ook in je mailbox.', true);
+              if (message) showMessage(message, 'Bedankt! De checklist wordt nu gedownload.', true);
               form.reset();
               var link = document.createElement('a');
               link.href = '/downloads/voedingstips-gezonde-spijsvertering.pdf';
