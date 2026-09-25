@@ -86,8 +86,26 @@
     });
   }
 
+  function initBlogFilters() {
+    var pills = document.querySelectorAll('.filter-pill');
+    if (!pills.length) return;
+    var cards = document.querySelectorAll('.blog-card');
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        pills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        var filter = pill.getAttribute('data-filter');
+        cards.forEach(function (card) {
+          var matches = filter === 'all' || card.getAttribute('data-category') === filter;
+          card.classList.toggle('is-hidden', !matches);
+        });
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initDownloadForms();
     initContactForm();
+    initBlogFilters();
   });
 })();

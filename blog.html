@@ -28,6 +28,11 @@ a{text-decoration:none;color:inherit;}
 .blog-card:hover{box-shadow:0 16px 40px rgba(30,61,56,0.1);}
 .blog-card img{width:100%;height:180px;object-fit:cover;display:block;background:#EAF2EF;}
 .blog-card .blog-card-body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.blog-card.is-hidden{display:none;}
+
+.filter-pill{font-family:'Poppins',system-ui,sans-serif;font-size:14px;font-weight:500;padding:10px 20px;border-radius:999px;border:1.5px solid #CFDFD6;background:#FFFFFF;color:#4A6A60;cursor:pointer;transition:background .15s ease,border-color .15s ease,color .15s ease;}
+.filter-pill:hover{border-color:#C97A5F;color:#1E3D38;}
+.filter-pill.active{background:#C97A5F;border-color:#C97A5F;color:#FFFFFF;}
 </style>
 </head>
 <body>
@@ -61,10 +66,20 @@ a{text-decoration:none;color:inherit;}
 </section>
 
 <section style="width:100%;box-sizing:border-box;padding:16px 120px 96px;">
+<div id="blog-filters" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;">
+<button class="filter-pill active" data-filter="all" type="button">Alle</button>
+<button class="filter-pill" data-filter="babys-kinderen" type="button">Baby's &amp; kinderen</button>
+<button class="filter-pill" data-filter="darmgezondheid" type="button">Darmgezondheid</button>
+<button class="filter-pill" data-filter="ehbo-zelfzorg" type="button">EHBO &amp; zelfzorg</button>
+<button class="filter-pill" data-filter="hormonen-cyclus" type="button">Hormonen &amp; cyclus</button>
+<button class="filter-pill" data-filter="huid" type="button">Huid</button>
+<button class="filter-pill" data-filter="leefstijl-energie" type="button">Leefstijl &amp; energie</button>
+<button class="filter-pill" data-filter="weerstand-luchtwegen" type="button">Weerstand &amp; luchtwegen</button>
+</div>
 <div id="blog-grid" style="display:flex;gap:24px;flex-wrap:wrap;">
 
 <!-- BLOG_POSTS_START -->
-<a href="blog/aarden-blote-voeten-in-het-gras.html" class="blog-card">
+<a href="blog/aarden-blote-voeten-in-het-gras.html" class="blog-card" data-category="leefstijl-energie">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Leefstijl &amp; energie</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Aarden (met je blote voeten in het gras) is goed voor je</span>
@@ -72,7 +87,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">25 september 2026</span>
 </div>
 </a>
-<a href="blog/histamine-intolerantie.html" class="blog-card">
+<a href="blog/histamine-intolerantie.html" class="blog-card" data-category="darmgezondheid">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Darmgezondheid</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Histamine-intolerantie: de emmer die overloopt</span>
@@ -80,7 +95,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">25 september 2026</span>
 </div>
 </a>
-<a href="blog/jeuk-natuurlijke-tips.html" class="blog-card">
+<a href="blog/jeuk-natuurlijke-tips.html" class="blog-card" data-category="huid">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Huid</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Jeuk op de huid? Deze natuurlijke tips geven verlichting</span>
@@ -88,7 +103,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">2 april 2026</span>
 </div>
 </a>
-<a href="blog/vallen-en-stotenzalf-kids.html" class="blog-card">
+<a href="blog/vallen-en-stotenzalf-kids.html" class="blog-card" data-category="babys-kinderen">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Baby's &amp; kinderen</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Recept: vallen-en-stotenzalf voor kids</span>
@@ -96,7 +111,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">4 maart 2026</span>
 </div>
 </a>
-<a href="blog/wintertenen.html" class="blog-card">
+<a href="blog/wintertenen.html" class="blog-card" data-category="huid">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Huid</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Natuurlijke middelen bij wintertenen</span>
@@ -104,7 +119,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">12 december 2025</span>
 </div>
 </a>
-<a href="blog/menstruatiepijn-pms-aromatherapie.html" class="blog-card">
+<a href="blog/menstruatiepijn-pms-aromatherapie.html" class="blog-card" data-category="hormonen-cyclus">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Hormonen &amp; cyclus</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Menstruatiepijn, PMS en aromatherapie</span>
@@ -112,7 +127,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">5 december 2025</span>
 </div>
 </a>
-<a href="blog/fire-cider-recept.html" class="blog-card">
+<a href="blog/fire-cider-recept.html" class="blog-card" data-category="weerstand-luchtwegen">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Weerstand &amp; luchtwegen</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Recept: zelf fire cider maken + video</span>
@@ -120,7 +135,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">12 november 2025</span>
 </div>
 </a>
-<a href="blog/overmatig-zweten.html" class="blog-card">
+<a href="blog/overmatig-zweten.html" class="blog-card" data-category="hormonen-cyclus">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Hormonen &amp; cyclus</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Waarom zweet ik zoveel?</span>
@@ -128,7 +143,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">10 oktober 2025</span>
 </div>
 </a>
-<a href="blog/lichen-sclerosus.html" class="blog-card">
+<a href="blog/lichen-sclerosus.html" class="blog-card" data-category="huid">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Huid</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Natuurlijke oplossingen bij Lichen Sclerosus</span>
@@ -136,7 +151,7 @@ a{text-decoration:none;color:inherit;}
 <span style="margin-top:auto;padding-top:8px;font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:12px;color:#8AA39C;">15 januari 2025</span>
 </div>
 </a>
-<a href="blog/natuurlijke-ehbo-kit.html" class="blog-card">
+<a href="blog/natuurlijke-ehbo-kit.html" class="blog-card" data-category="ehbo-zelfzorg">
 <div class="blog-card-body">
 <span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#C97A5F;font-weight:600;">EHBO &amp; zelfzorg</span>
 <span style="font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600;color:#1E3D38;line-height:1.4;">Een natuurlijke EHBO-kit: deze 10 dingen moeten erin!</span>
