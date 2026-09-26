@@ -96,7 +96,8 @@
         pill.classList.add('active');
         var filter = pill.getAttribute('data-filter');
         cards.forEach(function (card) {
-          var matches = filter === 'all' || card.getAttribute('data-category') === filter;
+          var categories = (card.getAttribute('data-category') || '').split(' ');
+          var matches = filter === 'all' || categories.indexOf(filter) !== -1;
           card.classList.toggle('is-hidden', !matches);
         });
       });
