@@ -63,10 +63,10 @@
       button.textContent = 'Bezig...';
       if (message) message.textContent = '';
 
-      fetch('/', {
+      fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
       })
         .then(function (res) {
           if (res.ok) {
