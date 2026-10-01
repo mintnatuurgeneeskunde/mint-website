@@ -8,6 +8,7 @@
 - [Aanbod en tarieven](https://mint-natuurgeneeskunde.nl/diensten.html): consulten, behandeltrajecten en de Mint-app
 - [Afspraak maken](https://mint-natuurgeneeskunde.nl/afspraak-maken.html)
 - [Contact](https://mint-natuurgeneeskunde.nl/contact.html)
+- [In de media](https://mint-natuurgeneeskunde.nl/in-de-media.html): Thirza als journalist, achtergrond en recente publicaties
 
 ## Blog
 Artikelen over natuurgeneeskunde, aromatherapie en natuurlijke tips. Volledig overzicht: [Blog](https://mint-natuurgeneeskunde.nl/blog.html)
