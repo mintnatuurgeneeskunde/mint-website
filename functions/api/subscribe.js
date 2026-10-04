@@ -1,7 +1,12 @@
+const ALLOWED_TAGS = {
+  'checklist-spijsvertering': 'Website - gratis checklist',
+  'aromatherapie-ebook': 'aromatherapie-ebook',
+};
+
 export async function onRequestPost({ request, env }) {
-  let email;
+  let email, tag;
   try {
-    ({ email } = await request.json());
+    ({ email, tag } = await request.json());
   } catch (err) {
     return new Response(JSON.stringify({ error: 'Ongeldige aanvraag.' }), { status: 400 });
   }
@@ -9,6 +14,8 @@ export async function onRequestPost({ request, env }) {
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return new Response(JSON.stringify({ error: 'Vul een geldig e-mailadres in.' }), { status: 400 });
   }
+
+  const mailchimpTag = ALLOWED_TAGS[tag] || ALLOWED_TAGS['checklist-spijsvertering'];
 
   const { MAILCHIMP_API_KEY, MAILCHIMP_SERVER_PREFIX, MAILCHIMP_LIST_ID } = env;
   if (!MAILCHIMP_API_KEY || !MAILCHIMP_SERVER_PREFIX || !MAILCHIMP_LIST_ID) {
@@ -27,7 +34,7 @@ export async function onRequestPost({ request, env }) {
         body: JSON.stringify({
           email_address: email,
           status: 'subscribed',
-          tags: ['Website - gratis checklist'],
+          tags: [mailchimpTag],
         }),
       }
     );

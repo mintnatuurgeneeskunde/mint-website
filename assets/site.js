@@ -16,10 +16,15 @@
         button.textContent = 'Bezig...';
         if (message) message.textContent = '';
 
+        var tag = form.dataset.tag || 'checklist-spijsvertering';
+        var pdf = form.dataset.pdf || '/downloads/voedingstips-gezonde-spijsvertering.pdf';
+        var filename = form.dataset.filename || 'Mint - Voedingstips voor een gezonde spijsvertering.pdf';
+        var successText = form.dataset.successMessage || 'Bedankt! De checklist wordt nu gedownload.';
+
         fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
+          body: JSON.stringify({ email: email, tag: tag })
         })
           .then(function (res) {
             return res.json().catch(function () { return {}; }).then(function (data) {
@@ -28,11 +33,11 @@
           })
           .then(function (result) {
             if (result.ok) {
-              if (message) showMessage(message, 'Bedankt! De checklist wordt nu gedownload.', true);
+              if (message) showMessage(message, successText, true);
               form.reset();
               var link = document.createElement('a');
-              link.href = '/downloads/voedingstips-gezonde-spijsvertering.pdf';
-              link.download = 'Mint - Voedingstips voor een gezonde spijsvertering.pdf';
+              link.href = pdf;
+              link.download = filename;
               document.body.appendChild(link);
               link.click();
               link.remove();
