@@ -101,6 +101,20 @@ a{text-decoration:none;color:inherit;}
 </select>
 </div>
 
+<fieldset style="margin:0;padding:0;border:none;display:flex;flex-direction:column;gap:8px;">
+<legend style="padding:0;margin:0 0 6px;font-family:'Poppins',system-ui,sans-serif;font-size:13px;font-weight:500;color:#1E3D38;">Hoe wil je betalen?</legend>
+
+<label style="display:flex;gap:12px;align-items:flex-start;border:1px solid #CFDFD6;border-radius:14px;padding:14px 16px;background:#F9F9F9;cursor:pointer;">
+<input type="radio" name="betaalwijze" value="In 1 keer" required style="margin-top:4px;flex:0 0 auto;">
+<span style="font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:14px;line-height:1.6;color:#4A6A60;"><strong style="color:#1E3D38;font-weight:500;">In 1 keer</strong> — €299 (dinsdaggroep) of €329 (vrijdagavondgroep). Je ontvangt de factuur na sluiting van de aanmelding op 11 december, die betaal je binnen 7 dagen.</span>
+</label>
+
+<label style="display:flex;gap:12px;align-items:flex-start;border:1px solid #CFDFD6;border-radius:14px;padding:14px 16px;background:#F9F9F9;cursor:pointer;">
+<input type="radio" name="betaalwijze" value="In 4 termijnen" required style="margin-top:4px;flex:0 0 auto;">
+<span style="font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:14px;line-height:1.6;color:#4A6A60;"><strong style="color:#1E3D38;font-weight:500;">In 4 termijnen</strong> — 4 × €79 = €316 (dinsdaggroep) of 4 × €87 = €348 (vrijdagavondgroep). De eerste termijn betaal je in december, de laatste in maart.</span>
+</label>
+</fieldset>
+
 <div style="display:flex;flex-direction:column;gap:6px;">
 <label for="bericht" style="font-family:'Poppins',system-ui,sans-serif;font-size:13px;font-weight:500;color:#1E3D38;">Toelichting (optioneel)</label>
 <textarea id="bericht" name="bericht" rows="3" placeholder="Is er nog iets dat je wilt laten weten?" style="font-size:15px;padding:12px 16px;border-radius:14px;border:1px solid #CFDFD6;background:#F9F9F9;color:#1E3D38;box-sizing:border-box;resize:vertical;"></textarea>
