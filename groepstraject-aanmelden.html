@@ -122,6 +122,19 @@ a{text-decoration:none;color:inherit;}
 <textarea id="bericht" name="bericht" rows="3" placeholder="Is er nog iets dat je wilt laten weten?" style="font-size:15px;padding:12px 16px;border-radius:14px;border:1px solid #CFDFD6;background:#F9F9F9;color:#1E3D38;box-sizing:border-box;resize:vertical;"></textarea>
 </div>
 
+<fieldset style="margin:0;padding:0;border:none;display:flex;flex-direction:column;gap:8px;">
+<legend style="padding:0;margin:0 0 6px;font-family:'Poppins',system-ui,sans-serif;font-size:13px;font-weight:500;color:#1E3D38;">Is een van deze op jou van toepassing: zwanger, (een verleden met) een eetstoornis, bloed bij de ontlasting, onbedoeld gewichtsverlies of een darmziekte zoals Crohn of colitis?</legend>
+<div style="display:flex;gap:16px;">
+<label style="display:flex;gap:8px;align-items:center;font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:14px;color:#4A6A60;">
+<input type="radio" name="screening" value="Nee" required> Nee
+</label>
+<label style="display:flex;gap:8px;align-items:center;font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:14px;color:#4A6A60;">
+<input type="radio" name="screening" value="Ja" required> Ja
+</label>
+</div>
+<p style="margin:0;font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:13px;line-height:1.6;color:#4A6A60;">Bij ja neemt Thirza eerst contact met je op voordat je aanmelding definitief is.</p>
+</fieldset>
+
 <div style="display:flex;align-items:flex-start;gap:10px;">
 <input id="voorwaarden" name="voorwaarden" type="checkbox" required style="margin-top:3px;width:16px;height:16px;flex:0 0 16px;">
 <label for="voorwaarden" style="font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:13px;line-height:1.6;color:#4A6A60;">Ik ga akkoord met de <a href="groepstraject-voorwaarden" target="_blank" rel="noopener" style="color:#4A7050;text-decoration:underline;">voorwaarden van het groepstraject</a>.</label>
