@@ -53,6 +53,10 @@ a{text-decoration:none;color:inherit;}
 .nav-dropdown:hover .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:block;}
 .dropdown-menu a{display:block;padding:10px 14px;border-radius:10px;font-family:'Poppins',system-ui,sans-serif;font-size:14px;font-weight:400;color:#1E3D38;text-decoration:none;white-space:nowrap;}
 .dropdown-menu a:hover{background:#EAF2EF;}
+
+.site-popup-overlay{position:fixed;inset:0;background:rgba(30,61,56,0.55);display:flex;align-items:center;justify-content:center;padding:20px;z-index:1000;opacity:0;visibility:hidden;transition:opacity 0.25s ease;}
+.site-popup-overlay.is-open{opacity:1;visibility:visible;}
+.site-popup-card{background:#F9F9F9;border-radius:24px;max-width:460px;width:100%;padding:36px;position:relative;box-shadow:0 30px 60px rgba(30,61,56,0.28);display:flex;flex-direction:column;gap:14px;box-sizing:border-box;}
 </style>
 </head>
 <body>
@@ -331,6 +335,19 @@ a{text-decoration:none;color:inherit;}
 <span>Aangesloten bij NWP · mint-natuurgeneeskunde.nl</span>
 </div>
 </footer>
+
+<div class="site-popup-overlay js-groepstraject-popup" role="dialog" aria-label="Online groepstraject">
+<div class="site-popup-card">
+<button type="button" class="js-popup-close" aria-label="Sluiten" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:none;background:#EAF2EF;color:#1E3D38;font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+<span style="font-family:'Poppins',system-ui,sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#C97A5F;font-weight:600;">Nieuw · online groepstraject</span>
+<h3 style="margin:0;font-family:'Lora',Georgia,serif;font-size:23px;font-weight:600;color:#1E3D38;">Gezonde darmen en fitter leven, in 13 weken</h3>
+<p style="margin:0;font-family:'Poppins',system-ui,sans-serif;font-weight:300;font-size:15px;line-height:1.7;color:#4A6A60;">Werk 13 weken onder persoonlijke begeleiding van Thirza aan je darmgezondheid, met <em style="font-family:'Lora',Georgia,serif;font-style:italic;">De Poepdokter Doeboek</em> als basis. Start januari 2027. Aanmelden kan tot en met 11 december, nog 10/10 plekken per groep.</p>
+<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-top:6px;">
+<a href="groepstraject" class="js-popup-close" style="background:#4A7050;color:#FFFFFF;text-decoration:none;font-family:'Poppins',system-ui,sans-serif;font-weight:500;font-size:14px;padding:14px 26px;border-radius:999px;">Bekijk het traject →</a>
+<button type="button" class="js-popup-close" style="background:none;border:none;color:#4A6A60;font-family:'Poppins',system-ui,sans-serif;font-size:13px;cursor:pointer;text-decoration:underline;padding:0;">Niet nu</button>
+</div>
+</div>
+</div>
 
 </div>
 <script src="assets/site.js" defer></script>

@@ -109,6 +109,35 @@
     });
   }
 
+  function initGroepstrajectPopup() {
+    var overlay = document.querySelector('.js-groepstraject-popup');
+    if (!overlay) return;
+
+    var storageKey = 'mint_groepstraject_popup_seen';
+    var alreadySeen = false;
+    try { alreadySeen = window.localStorage.getItem(storageKey) === '1'; } catch (e) {}
+    if (alreadySeen) return;
+
+    function dismiss() {
+      overlay.classList.remove('is-open');
+      try { window.localStorage.setItem(storageKey, '1'); } catch (e) {}
+    }
+
+    overlay.querySelectorAll('.js-popup-close').forEach(function (el) {
+      el.addEventListener('click', dismiss);
+    });
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) dismiss();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') dismiss();
+    });
+
+    setTimeout(function () {
+      overlay.classList.add('is-open');
+    }, 8000);
+  }
+
   function initMobileNav() {
     var btn = document.querySelector('.mobile-menu-btn');
     var nav = document.querySelector('.site-nav');
@@ -128,5 +157,6 @@
     initContactForm();
     initBlogFilters();
     initMobileNav();
+    initGroepstrajectPopup();
   });
 })();
