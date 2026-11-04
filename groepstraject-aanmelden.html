@@ -72,10 +72,9 @@ a{text-decoration:none;color:inherit;}
 <section style="width:100%;box-sizing:border-box;padding:16px 120px 96px;display:flex;justify-content:center;">
 <div style="max-width:640px;width:100%;">
 
-<form name="groepstraject" method="POST" action="https://formspree.io/f/mnpnokge" style="background:#FFFFFF;border-radius:28px;padding:40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px;box-shadow:0 20px 48px rgba(30,61,56,0.08);">
+<form name="groepstraject" method="POST" action="https://formspree.io/f/mnpnokge" class="js-redirect-form" data-redirect="https://mint-natuurgeneeskunde.nl/groepstraject-bedankt" style="background:#FFFFFF;border-radius:28px;padding:40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px;box-shadow:0 20px 48px rgba(30,61,56,0.08);">
 <p style="display:none;"><label>Laat dit veld leeg: <input name="_gotcha"></label></p>
 <input type="hidden" name="_subject" value="Aanmelding Groepstraject">
-<input type="hidden" name="_next" value="https://mint-natuurgeneeskunde.nl/groepstraject-bedankt">
 
 <div style="display:flex;flex-direction:column;gap:6px;">
 <label for="naam" style="font-family:'Poppins',system-ui,sans-serif;font-size:13px;font-weight:500;color:#1E3D38;">Naam</label>
@@ -141,6 +140,7 @@ a{text-decoration:none;color:inherit;}
 </div>
 
 <button type="submit" style="margin-top:4px;background:#4A7050;color:#FFFFFF;border:none;font-family:'Poppins',system-ui,sans-serif;font-weight:500;font-size:15px;padding:16px 30px;border-radius:999px;cursor:pointer;">Aanmelden versturen</button>
+<span class="js-form-message" style="font-family:'Poppins',system-ui,sans-serif;font-weight:400;font-size:13px;min-height:16px;"></span>
 </form>
 
 <script>

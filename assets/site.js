@@ -91,6 +91,40 @@
     });
   }
 
+  function initRedirectForms() {
+    document.querySelectorAll('.js-redirect-form').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var button = form.querySelector('button[type="submit"]');
+        var message = form.querySelector('.js-form-message');
+        var originalLabel = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Bezig...';
+        if (message) message.textContent = '';
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        })
+          .then(function (res) {
+            if (res.ok) {
+              window.location.href = form.dataset.redirect;
+            } else {
+              if (message) showMessage(message, 'Er ging iets mis, probeer het later opnieuw of mail naar thirza@mint-natuurgeneeskunde.nl.', false);
+              button.disabled = false;
+              button.textContent = originalLabel;
+            }
+          })
+          .catch(function () {
+            if (message) showMessage(message, 'Er ging iets mis, probeer het later opnieuw of mail naar thirza@mint-natuurgeneeskunde.nl.', false);
+            button.disabled = false;
+            button.textContent = originalLabel;
+          });
+      });
+    });
+  }
+
   function initBlogFilters() {
     var pills = document.querySelectorAll('.filter-pill');
     if (!pills.length) return;
@@ -155,6 +189,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     initDownloadForms();
     initContactForm();
+    initRedirectForms();
     initBlogFilters();
     initMobileNav();
     initGroepstrajectPopup();
