@@ -48,3 +48,9 @@
 /bioresonantie         /diensten   301
 /spoed/                /veelgestelde-vragen  301
 /spoed                 /veelgestelde-vragen  301
+
+# Oude WordPress-URL's die nog geïndexeerd staan in Google Search Console (gevonden 2026-11-04)
+# Wildcards zodat ook nog niet ontdekte oude tag/category/media-URL's worden opgevangen
+/tag/*                 /blog   301
+/category/*            /blog   301
+/wp-content/uploads/*   /blog   301
