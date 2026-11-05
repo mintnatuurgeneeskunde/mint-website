@@ -38,7 +38,8 @@ img, iframe, video { max-width: 100%; }
     padding:4px 0 8px 16px !important;
     margin-top:0 !important;
   }
-  .site-nav > a[href*="app.mint-natuurgeneeskunde"]{
+  .site-nav > a[href*="app.mint-natuurgeneeskunde"],
+  .site-nav > a[href*="clientomgeving"]{
     margin-top:8px;border-bottom:none !important;text-align:center;
   }
 
