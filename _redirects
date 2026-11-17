@@ -54,3 +54,76 @@
 /tag/*                 /blog   301
 /category/*            /blog   301
 /wp-content/uploads/*   /blog   301
+
+# Oude platte WordPress-blogpost-URL's (zonder /blog/ prefix) die nog verkeer krijgen (gevonden via GA4, 2026-11-17)
+/natuurlijke-oplossingen-bij-lichen-sclerosus/   /blog/lichen-sclerosus   301
+/natuurlijke-oplossingen-bij-lichen-sclerosus    /blog/lichen-sclerosus   301
+/diy-maak-je-eigen-natuurlijke-afwasmiddel-een-low-budget-recept/   /blog/diy-maak-je-eigen-natuurlijke-afwasmiddel-een-low-budget-recept   301
+/diy-maak-je-eigen-natuurlijke-afwasmiddel-een-low-budget-recept    /blog/diy-maak-je-eigen-natuurlijke-afwasmiddel-een-low-budget-recept   301
+/recept-zelf-fire-cider-maken-video/   /blog/fire-cider-recept   301
+/recept-zelf-fire-cider-maken-video    /blog/fire-cider-recept   301
+/recept-zalf-tegen-schimmelnagels/   /blog/zalf-tegen-schimmelnagels   301
+/recept-zalf-tegen-schimmelnagels    /blog/zalf-tegen-schimmelnagels   301
+/wasmiddel-maken-van-kastanjes/   /blog/wasmiddel-van-kastanjes   301
+/wasmiddel-maken-van-kastanjes    /blog/wasmiddel-van-kastanjes   301
+/groeipijn-bij-kinderen-verzachten-op-een-natuurlijke-manier/   /blog/groeipijn-bij-kinderen-verzachten-op-een-natuurlijke-manier   301
+/etherische-olie-inzetten-bij-de-bevalling-natuurlijk-bevallen-met-aromatherapie/   /blog/etherische-olie-bevalling   301
+/etherische-olie-inzetten-bij-de-bevalling-natuurlijk-bevallen-met-aromatherapie    /blog/etherische-olie-bevalling   301
+/hoofdluis-bestrijden-met-etherische-olien-natuurlijke-oplossingen-voor-een-vervelend-probleem/   /blog/hoofdluis-bestrijden-etherische-olie   301
+/hoofdluis-bestrijden-met-etherische-olien-natuurlijke-oplossingen-voor-een-vervelend-probleem    /blog/hoofdluis-bestrijden-etherische-olie   301
+/aromatherapie-en-natuurlijke-middelen-bij-wintertenen/   /blog/wintertenen   301
+/aromatherapie-en-natuurlijke-middelen-bij-wintertenen    /blog/wintertenen   301
+/hoofdpijn-en-migraine-verlichten-met-etherische-olie-tips-recept/   /blog/hoofdpijn-en-migraine-verlichten-met-etherische-olie-tips-recept   301
+/je-tandenborstel-reinigen-met-baking-soda-zo-doe-je-dat/   /blog/je-tandenborstel-reinigen-met-baking-soda-zo-doe-je-dat   301
+/misselijkheid-verlichten-met-aromatherapie-7-etherische-olien-recept/   /blog/misselijkheid-verlichten-met-aromatherapie-7-etherische-olien-recept   301
+/over-vaginale-schimmelinfecties-en-natuurlijke-oplossingen/   /blog/vaginale-schimmelinfectie   301
+/over-vaginale-schimmelinfecties-en-natuurlijke-oplossingen    /blog/vaginale-schimmelinfectie   301
+/zelf-natuurlijke-lippenbalsem-maken-recept/   /blog/zelf-natuurlijke-lippenbalsem-maken-recept   301
+/zo-werkt-het-circadiaans-ritme-en-zo-begrijp-je-jouw-innerlijke-klok/   /blog/circadiaans-ritme   301
+/zo-werkt-het-circadiaans-ritme-en-zo-begrijp-je-jouw-innerlijke-klok    /blog/circadiaans-ritme   301
+/aromatherapie-in-de-kraamweek-ik-geef-je-tal-van-tips-tricks/   /blog/aromatherapie-in-de-kraamweek-ik-geef-je-tal-van-tips-tricks   301
+/hoogsensitiviteit-en-aromatherapie-deze-etherische-olien-kunnen-je-helpen-ontprikkelen/   /blog/hoogsensitiviteit-aromatherapie   301
+/hoogsensitiviteit-en-aromatherapie-deze-etherische-olien-kunnen-je-helpen-ontprikkelen    /blog/hoogsensitiviteit-aromatherapie   301
+/met-je-blote-voeten-in-het-gras-dit-is-waarom-aarden-zo-belangrijk-is/   /blog/aarden-blote-voeten-in-het-gras   301
+/met-je-blote-voeten-in-het-gras-dit-is-waarom-aarden-zo-belangrijk-is    /blog/aarden-blote-voeten-in-het-gras   301
+/etherische-olie-doseren-doe-dat-veilig-met-deze-tips/   /blog/etherische-olie-doseren-doe-dat-veilig-met-deze-tips   301
+/menstruatiepijn-pms-en-aromatherapie/   /blog/menstruatiepijn-pms-aromatherapie   301
+/menstruatiepijn-pms-en-aromatherapie    /blog/menstruatiepijn-pms-aromatherapie   301
+/menstruatieproducten-en-vaginale-gezondheid-dit-moet-je-weten/   /blog/menstruatieproducten-en-vaginale-gezondheid-dit-moet-je-weten   301
+/ondersteun-je-lever-met-een-leverpakking-nog-meer-tips-te-ontgiften/   /blog/ondersteun-je-lever-met-een-leverpakking-nog-meer-tips-te-ontgiften   301
+/recept-een-warm-kompres-tegen-spierpijn/   /blog/warm-kompres-spierpijn   301
+/recept-een-warm-kompres-tegen-spierpijn    /blog/warm-kompres-spierpijn   301
+/recept-ontspannend-badzout-met-etherische-olie/   /blog/recept-ontspannend-badzout-met-etherische-olie   301
+/recept-scrubzout-met-etherische-olie/   /blog/scrubzout-etherische-olie   301
+/recept-scrubzout-met-etherische-olie    /blog/scrubzout-etherische-olie   301
+/sheabutter-een-natuurlijke-bescherming-voor-je-huid-en-lippen-in-de-winter/   /blog/sheabutter-een-natuurlijke-bescherming-voor-je-huid-en-lippen-in-de-winter   301
+/waarom-zweet-ik-zoveel-wat-je-moet-weten-over-overmatig-zweten-en-welke-natuurlijke-oplossingen-er-zijn/   /blog/overmatig-zweten   301
+/waarom-zweet-ik-zoveel-wat-je-moet-weten-over-overmatig-zweten-en-welke-natuurlijke-oplossingen-er-zijn    /blog/overmatig-zweten   301
+/kruiden-bij-menstruatieklachten/   /blog   301
+/kruiden-bij-menstruatieklachten    /blog   301
+
+# Overige losse oude URL's (gevonden via GA4, 2026-11-17)
+/afspraakmaken          /afspraak-maken   301
+/praktijk/               /over-mij   301
+/praktijk                /over-mij   301
+/gratis-ebook/           /   301
+/gratis-ebook            /   301
+/voorbeeld-pagina/       /   301
+/voorbeeld-pagina        /   301
+
+# Kapotte "pad+pad"-combinaties ontstaan doordat 404.html voorheen relatieve nav-links had
+# (die link-bug is gefixt in 404.html zelf; deze vangen de al geïndexeerde/gecachete varianten op)
+/diy-maak-je-eigen-natuurlijke-afwasmiddel-een-low-budget-recept/diensten   /diensten   301
+/natuurlijke-oplossingen-bij-lichen-sclerosus/blog      /blog       301
+/natuurlijke-oplossingen-bij-lichen-sclerosus/over-mij  /over-mij   301
+/recept-zelf-fire-cider-maken-video/blog      /blog       301
+/recept-zelf-fire-cider-maken-video/diensten  /diensten   301
+/cart/diensten           /diensten   301
+
+# Oude webshop (WooCommerce, vóór migratie naar MijnDiaz) -> nieuwe externe webshop
+/shop/     https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
+/shop      https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
+/cart/     https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
+/store     https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
+/product/*            https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
+/product-category/*   https://mintnatuurgeneeskunde.clientomgeving.nl/winkel   301
